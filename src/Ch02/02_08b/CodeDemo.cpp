@@ -5,15 +5,16 @@
 #include <iostream>
 #include <cstdint>
 
-enum asset_type {texture, sound, animation, script};
+enum class asset_type {texture, sound, animation, script};
+enum class menu_section {background, music, texture, sound};
 
-int main(){
-    int asset_value;
+int main () {
+    int sound = 8;
 
-    asset_value = sound;
+    asset_type asset_value;
 
-    std::cout << "asset_value = " << asset_value << std::endl;
+    asset_value = asset_type::sound;
 
-    std::cout << std::endl << std::endl;
+    std::cout << "asset value: " << (int)sound << std::endl;
     return 0;
 }
